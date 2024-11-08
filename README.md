@@ -1,6 +1,6 @@
 # Frontend Mentor - FAQ accordion
 
-![Design preview for the FAQ accordion coding challenge](./design/desktop-preview.jpg)
+https://faq-accordion-chi-two.vercel.app/
 
 ## Welcome! 👋
 
