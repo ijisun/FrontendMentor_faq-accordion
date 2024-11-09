@@ -1,22 +1,34 @@
-let faqTitle = document.querySelectorAll(".faq-question");
+// 모든 FAQ 질문 요소를 선택하고 리스트 형태로 faqQuestion에 저장
+let faqQuestion = document.querySelectorAll(".faq-question");
 
-faqTitle.forEach((title) => { // 선택한 요소를 반복하며 각 요소에 클릭 이벤트 리스너를 추가
-  title.addEventListener("click",() => {
-    let faqItem = title.parentNode; // 부모 노드인 faq-area를 선택하여 faqItem 변수에 저장
+faqQuestion.forEach(item => { // 각 FAQ 질문에 클릭 이벤트를 추가
+  item.addEventListener("click",() => {
+    let faqItem = item.parentNode; // 클릭된 FAQ 질문의 부모 요소인 .faq-area를 선택
     let isActive = faqItem.classList.contains("active");
-    // faqItem이 active 클래스를 가지고 있는지 확인하고 isActive 변수에 저장
+    // 현재 .faq-area 요소에 active 클래스가 있는지 확인
     // active 클래스가 있으면 true, 없으면 false
-
-    if (isActive) { // 이미 열려 있는 경우 닫기
+    
+    if(isActive) { // active 클래스가 있으면(열려 있으면)
       faqItem.classList.remove("active");
-    } else {
-      // 열려 있는 다른 아이템 닫기
+    }else { // 다른 항목 중 열려 있는 것이 있으면 닫음
       let activeItem = document.querySelector(".faq-area.active");
-      if (activeItem) {
+      if(activeItem){
         activeItem.classList.remove("active");
       }
-      // 현재 아이템 열기
+      // 클릭된 항목에 active 클래스를 추가하여 열림 상태로 만듦
       faqItem.classList.add("active");
+    }
+
+    // 열림/닫힘 아이콘 요소를 선택
+    let openIcon = item.querySelector(".faq-icon.open");
+    let closeIcon = item.querySelector(".faq-icon.close");
+    
+    if(isActive) { // 현재 상태에 따라 아이콘 표시 전환
+      openIcon.style.display = "block";
+      closeIcon.style.display = "none";
+    }else {
+      openIcon.style.display = "none";
+      closeIcon.style.display = "block";
     }
   })
 })
