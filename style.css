@@ -40,7 +40,7 @@ body {
 .wrapper {
   width: 600px;
   min-height: 448px;
-  margin-top: 300px;
+  margin-top: 150px;
   padding: 39px 40px 15px;
   background-color: var(--color-white);
   border-radius: 20px;
@@ -112,7 +112,7 @@ body {
 
 @media (max-width: 660px) and (min-width: 441px) {
   .wrapper {
-    margin-top: 50px;
+    margin-top: 30px;
     width: 90%;
   }
   .card-title {
@@ -137,6 +137,7 @@ body {
   }
   .wrapper {
     width: 87.2vw; /* 327px */
+    margin-top: 30px;
     padding: 7.4667vw 6.4vw 1.3333vw; /* 28px 24px 5px */
   }
   .card-title-area {
