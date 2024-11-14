@@ -27,7 +27,7 @@ button {
 
 /* main style */
 body {
-  min-height: 100svh;
+  min-height: 100dvh;
   background: var(--color-light-pink) url("./images/background-pattern-desktop.svg") no-repeat;
   background-size: contain;  
   display: flex;
@@ -39,8 +39,7 @@ body {
 }
 .wrapper {
   width: 600px;
-  min-height: 448px;
-  margin-top: 150px;
+  margin: 8vw 0;
   padding: 39px 40px 15px;
   background-color: var(--color-white);
   border-radius: 20px;
@@ -78,7 +77,8 @@ body {
   align-items: center;
   cursor: pointer;
 }
-.faq-question:hover {
+.faq-question:hover,
+.faq-question:active {
   color: #ad28eb;
 }
 .faq-title {
@@ -102,17 +102,15 @@ body {
 .faq-icon.close {
   display: none;
 }
-/*
 .faq-area.active .faq-icon.open {
   display: none;
 }.faq-area.active .faq-icon.close {
   display: block;
 }
-*/
 
 @media (max-width: 660px) and (min-width: 441px) {
   .wrapper {
-    margin-top: 30px;
+    margin-top: 12vw;
     width: 90%;
   }
   .card-title {
@@ -137,7 +135,7 @@ body {
   }
   .wrapper {
     width: 87.2vw; /* 327px */
-    margin-top: 30px;
+    margin-top: 20vw;
     padding: 7.4667vw 6.4vw 1.3333vw; /* 28px 24px 5px */
   }
   .card-title-area {

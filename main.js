@@ -18,17 +18,5 @@ faqQuestion.forEach(item => { // 각 FAQ 질문에 클릭 이벤트를 추가
       // 클릭된 항목에 active 클래스를 추가하여 열림 상태로 만듦
       faqItem.classList.add("active");
     }
-
-    // 열림/닫힘 아이콘 요소를 선택
-    let openIcon = item.querySelector(".faq-icon.open");
-    let closeIcon = item.querySelector(".faq-icon.close");
-    
-    if(isActive) { // 현재 상태에 따라 아이콘 표시 전환
-      openIcon.style.display = "block";
-      closeIcon.style.display = "none";
-    }else {
-      openIcon.style.display = "none";
-      closeIcon.style.display = "block";
-    }
   })
 })
